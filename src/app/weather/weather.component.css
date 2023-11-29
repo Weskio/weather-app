@@ -1,0 +1,18 @@
+.bg {
+    background-image: url(./krystal-ng-jRp60R7ogNQ-unsplash.jpg);
+    height: 100vh;
+    padding: 3.5%;
+    padding-right: 8%;
+    padding-left: 8%;
+}
+
+.main {
+    backdrop-filter: blur(20px) brightness(1.8);
+    background-color: rgba(0, 0, 0, 0); /* Set the background color to transparent */
+    border-radius: 2.5%;
+    height: 80vh;
+}
+.data{
+    border-bottom-color: gray;
+    border: 2px;
+}
