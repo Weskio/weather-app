@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,OnInit,inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-weather',
@@ -8,6 +9,10 @@ import { CommonModule } from '@angular/common';
   templateUrl: './weather.component.html',
   styleUrl: './weather.component.css'
 })
-export class WeatherComponent {
+export class WeatherComponent implements OnInit {
+
+  httpClient = inject(HttpClient)
+
+  ngOnInit(): void {}
 
 }
