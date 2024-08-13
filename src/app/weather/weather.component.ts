@@ -1,6 +1,5 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import { WeatherService } from '../services/weather.service';
 
 interface WeatherDetails {
@@ -24,8 +23,7 @@ export class WeatherComponent {
   public weatherDetails?: WeatherDetails;
   public date = new Date();
 
-  constructor(private weatherService: WeatherService) {
-  }
+  constructor(private weatherService: WeatherService) {}
 
   ngAfterViewInit() {
     this.getUserCurrentLocation();
@@ -36,7 +34,6 @@ export class WeatherComponent {
       const lat = position.coords.latitude;
       const lng = position.coords.longitude;
 
-      console.log('Latitude', lat, 'Longitude', lng);
       this.weatherService
         .getWeatherDataByLatLng(lat, lng)
         .subscribe((res: any) => {
@@ -58,7 +55,6 @@ export class WeatherComponent {
             descText: descText,
           };
         });
-      console.log('Latitude', lat, 'Longitude', lng);
     });
   }
 
